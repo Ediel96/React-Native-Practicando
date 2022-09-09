@@ -2,14 +2,26 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
+import {NavigationContainer} from '@react-navigation/native';
+// import {createStackNavigator} from '@react-navigation/stack';
 
-function App() {
+import HomeScreen from './screens/HomeScreen';
+import TaskFormScreen from './screens/TaskListScreen';
+
+
+const Stack = createStackNavigator ();
+
+const App = () =>{
   return (
-    <View>
-      <Text>Hola Soy Hamilton</Text>
-    </View>
+    <NavigationContainer>
+      {/* <Stack.Navigator>
+        <Stack.Screen name="tareass" component={TaskFormScreen}/>
+        <Stack.Screen name="HomeScreen" component={HomeScreen}/>
+      </Stack.Navigator> */}
+    </NavigationContainer>
   );
-};
+}
+
 
 
 export default App;
